@@ -5,9 +5,6 @@ import { InternalComponent } from './internal/internal.component';
 import { RouterModule } from '@angular/router';
 import { InternalRoutingModule } from './internal/internal-routing.module';
 import { ExternalRoutingModule } from './external/external-routing.module';
-
-
-
 @NgModule({
     declarations: [ExternalComponent, InternalComponent],
     imports: [
@@ -15,7 +12,6 @@ import { ExternalRoutingModule } from './external/external-routing.module';
         RouterModule,
         InternalRoutingModule,
         ExternalRoutingModule
-
     ]
 })
 export class LayoutsModule { }
