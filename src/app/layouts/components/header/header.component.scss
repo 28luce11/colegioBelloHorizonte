@@ -2,7 +2,7 @@
 @import 'abstract/mixin';
 
 .header {
-    background: #ffffff;
+    background: $white;
     padding: 10px;
     width: 100%;
     display: flex;
@@ -24,7 +24,15 @@
             margin: 10px;
 
             .items {
-                color: #090975;
+                color: $dark-blue;
+
+                &:hover {
+                    color: $light-blue;
+                }
+                
+                &:active {
+                    color: $light-blue;
+                }
                 
             }
         }

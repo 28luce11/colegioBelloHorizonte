@@ -10,11 +10,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    declarations: [
+    declarations:
+    [
         ExternalComponent,
         InternalComponent,
-        HeaderComponent],
-    imports: [
+        HeaderComponent
+    ],
+    imports:
+    [
         CommonModule,
         RouterModule,
         InternalRoutingModule,
