@@ -7,14 +7,19 @@ import { InternalComponent } from './internal/internal.component';
 import { InternalRoutingModule } from './internal/internal-routing.module';
 import { ExternalRoutingModule } from './external/external-routing.module';
 import { HeaderComponent } from './components/header/header.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    declarations: [ExternalComponent, InternalComponent, HeaderComponent],
+    declarations: [
+        ExternalComponent,
+        InternalComponent,
+        HeaderComponent],
     imports: [
         CommonModule,
         RouterModule,
         InternalRoutingModule,
-        ExternalRoutingModule
+        ExternalRoutingModule,
+        SharedModule
     ]
 })
 export class LayoutsModule { }
