@@ -1,0 +1,31 @@
+@import 'abstract/variables';
+@import 'abstract/mixin';
+
+.menu {
+    background: $dark-blue;
+    width: 15%;
+    box-shadow: inset 0 0 5px 0 rgb(230, 228, 228);
+    color: $white;
+    font-size: 10px;
+
+    header{
+        width: 100%;
+        display:block;
+        padding: 18px;
+        box-shadow: inset 0 0 1px 0 rgb(230, 228, 228);
+    }
+}
+
+@include from-breakpoint(576px) {
+    .menu {
+        width: 15%;
+        font-size: 15px;
+    }
+}
+
+@include from-breakpoint(768px) {
+    .menu {
+        width: 15%;
+        font-size: 20px;
+    }
+}

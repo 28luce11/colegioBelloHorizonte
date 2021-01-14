@@ -9,6 +9,7 @@ import { ExternalRoutingModule } from './external/external-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderExternalComponent } from './components/header-external/header-external.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
     declarations:
@@ -16,7 +17,8 @@ import { HeaderExternalComponent } from './components/header-external/header-ext
         ExternalComponent,
         InternalComponent,
         HeaderComponent,
-        HeaderExternalComponent
+        HeaderExternalComponent,
+        MenuComponent
     ],
     imports:
     [

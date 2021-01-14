@@ -14,3 +14,14 @@ html, body {
 body { 
     margin: 0; 
 }
+.side-menu {
+    background-color: #090975;
+    
+    .mat-menu-item {
+        color: #ffff;
+        &
+        ::selection {
+            background: #36366b;
+        }
+    }
+}
