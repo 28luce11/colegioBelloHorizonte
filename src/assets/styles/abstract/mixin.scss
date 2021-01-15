@@ -8,3 +8,18 @@
         @content;
     }
 }
+
+@mixin screen-logo-mobile () {
+    width: 60px;
+    height: 50px;
+}
+
+@mixin screen-logo-tablet () {
+    width: 80px;
+    height: 70px;
+}
+
+@mixin screen-logo-desktop () {
+    width: 100px;
+    height: 90px;
+}
