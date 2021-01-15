@@ -2,6 +2,8 @@
 
 @import 'base/normalize';
 @import 'base/reset';
+@import 'abstract/variables';
+@import 'abstract/mixin';
 
 *
 {
@@ -15,13 +17,9 @@ body {
     margin: 0; 
 }
 .side-menu {
-    background-color: #090975;
+    background-color: $dark-blue;
     
     .mat-menu-item {
-        color: #ffff;
-        &
-        ::selection {
-            background: #36366b;
-        }
+        color: $white;
     }
 }

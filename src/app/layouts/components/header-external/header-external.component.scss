@@ -17,9 +17,8 @@
     }
 }
 
-@include from-breakpoint(576px) {
+@include from-breakpoint($break-medium) {
     .header {
-
         .logo-img {
             width: 80px;
             height: 70px;
@@ -27,9 +26,8 @@
     }
 }
 
-@include from-breakpoint(768px) {
+@include from-breakpoint($break-large) {
     .header {
-
         .logo-img {
             width: 100px;
             height: 90px;

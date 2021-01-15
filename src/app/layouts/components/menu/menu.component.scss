@@ -16,14 +16,14 @@
     }
 }
 
-@include from-breakpoint(576px) {
+@include from-breakpoint($break-medium) {
     .menu {
         width: 15%;
         font-size: 15px;
     }
 }
 
-@include from-breakpoint(768px) {
+@include from-breakpoint($break-large) {
     .menu {
         width: 15%;
         font-size: 20px;
