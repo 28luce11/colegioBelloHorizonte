@@ -3,15 +3,13 @@
 
 .menu {
     background: $dark-blue;
-    width: 15%;
+    width: $width-mobile;
     box-shadow: inset 0 0 5px 0 rgb(230, 228, 228);
     color: $white;
-    font-size: 10px;
 
     header {
         width: 100%;
-        display:flex;
-        flex-direction: column;
+        display: block;
         padding: 18px;
         box-shadow: inset 0 0 1px 0 rgb(230, 228, 228);
 
@@ -23,22 +21,12 @@
 
 @include from-breakpoint($break-medium) {
     .menu {
-        font-size: 15px;
-
-        header {
-            flex-direction: row;
-            align-items: center;
-        }
+        width: $width-tablet;
     }
 }
 
 @include from-breakpoint($break-large) {
     .menu {
-        font-size: 20px;
-
-        header {
-            flex-direction: row;
-            align-items: center;
-        }
+        width: $width-desktop;
     }
 }
