@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { registerStudentConstants } from 'src/app/shared/constants/register-student.constants';
 
 @Component({
@@ -62,7 +63,7 @@ export class RegisterStudentComponent implements OnInit {
         });
     }
 
-    Send(value) {
+    send(value) {
         console.log(value);
     }
 
