@@ -6,7 +6,7 @@
         <ul class="routes">
             <li class="route"><a class="items" href="#">Pagos</a></li>
             <li class="route"><a class="items" href="#">Reportes</a></li>
-            <li class="route"><a class="items" href="#">Registros</a></li>
+            <li class="route"><a class="items" [routerLink]="['/internal/register']">Registros</a></li>
         </ul>
     </nav>
     <div class="sesion">
@@ -14,11 +14,11 @@
         <img [matMenuTriggerFor]="menu" class="avatar" mat-card-image src="../../../../assets/images/sesion/sesion.png">
         <mat-menu #menu>
             <button mat-menu-item>
-                <mat-icon>dialpad</mat-icon>
+                <mat-icon>create</mat-icon>
                 <span>Editar</span>
             </button>
             <button mat-menu-item>
-                <mat-icon>notifications_off</mat-icon>
+                <mat-icon>clear</mat-icon>
                 <span>Cerrar sesion</span>
             </button>
         </mat-menu>

@@ -1,0 +1,67 @@
+@import 'abstract/variables';
+@import 'abstract/mixin';
+
+.register-form-students {
+    display: flex;
+    justify-content: center;
+    margin:15px;
+    
+    .form-students {
+        width: 100%;
+    
+        .example-container {
+            display: flex;
+            flex-direction: column;
+        
+            .mat-form-field-appearance-fill .mat-form-field-flex {
+                width: 100%;
+                background-color: $white;
+            }
+
+            .title {
+                color: $light-blue;
+                font-size: $font-medium;
+                padding: $padding-title-mobile;
+            }
+
+            .option {
+                background-color:$background-option-gray;
+            }
+        }
+    }
+}
+
+@include from-breakpoint($break-medium) {
+    .register-form-students {
+        border: 1px solid $border-gray;
+        margin: 0 130px 0 130px;
+
+        .form-students {
+            width: revert;  
+
+            .example-container {
+                .title {
+                    padding: $padding-title-medium;
+                }
+            }
+        }
+    }
+}
+
+@include from-breakpoint($break-large) {
+    .register-form-students {
+        margin: 0 230px 0 230px;
+
+        .form-students {
+            .example-container {
+                .title {
+                    padding: $padding-title-large;
+                }
+            }
+
+            .save {
+                margin: 40px 0 40px 0;
+            }
+        }
+    }
+}
