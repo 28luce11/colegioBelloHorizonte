@@ -24,8 +24,8 @@
                     <input matInput [name]="formNames.lastName" [formControlName]="formNames.lastName" type="text"
                         placeholder="Nombre Estudiante">
                     <mat-error *ngIf="formRegisterStudent.get(formNames.lastName).hasError('required')">
-                        Es necesario llenar el
-                        campo</mat-error>
+                        Es necesario llenar el campo
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Grado</mat-label>
@@ -40,8 +40,8 @@
                         <option class="option" value="quinto">Quinto</option>
                     </select>
                     <mat-error *ngIf="formRegisterStudent.get(formNames.grade).hasError('required')">
-                        Es necesario llenar el
-                        campo</mat-error>
+                        Es necesario llenar el campo
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Tipo Estudiante</mat-label>
@@ -51,32 +51,32 @@
                         <option class="option" value="descuento">Descuento</option>
                     </select>
                     <mat-error *ngIf="formRegisterStudent.get(formNames.tipe).hasError('required')">
-                        Es necesario llenar el
-                        campo</mat-error>
+                        Es necesario llenar el campo
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Identificación Acudiente</mat-label>
                     <input matInput [name]="formNames.idGuardian" [formControlName]="formNames.idGuardian" type="number"
                         placeholder="Identificación">
                     <mat-error *ngIf="formRegisterStudent.get(formNames.idGuardian).hasError('required')">
-                        Es necesario llenar el
-                        campo</mat-error>
+                        Es necesario llenar el campo
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Nombre Acudiente</mat-label>
                     <input matInput [name]="formNames.nameGuardian" [formControlName]="formNames.nameGuardian" type="text"
                         placeholder="Nombre Acudiente">
                     <mat-error *ngIf="formRegisterStudent.get(formNames.nameGuardian).hasError('required')">
-                        Es necesario llenar
-                        el campo</mat-error>
+                        Es necesario llenar el campo
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Nombre Acudiente</mat-label>
                     <input matInput [name]="formNames.lastNameGuardian" [formControlName]="formNames.lastNameGuardian" type="text"
                         placeholder="Apellido Acudiente">
                     <mat-error *ngIf="formRegisterStudent.get(formNames.lastNameGuardian).hasError('required')">
-                        Es necesario llenar
-                        el campo</mat-error>
+                        Es necesario llenar el campo
+                    </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Celular Acudiente</mat-label>
