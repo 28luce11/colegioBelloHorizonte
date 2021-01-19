@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { registerStudentConstants } from 'src/app/shared/constants/register-student.constants';
 
 @Component({
     selector: 'app-register-student',
@@ -7,9 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
     styleUrls: ['./register-student.component.scss']
 })
 export class RegisterStudentComponent implements OnInit {
-
-    public formGroup: FormGroup;
-    emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$';
+    formRegisterStudent: FormGroup;
+    readonly formNames = registerStudentConstants.formNames;
 
     constructor(private formBuilder: FormBuilder) { }
 
@@ -18,58 +18,52 @@ export class RegisterStudentComponent implements OnInit {
     }
 
     private buildForm() {
-
-        this.formGroup = this.formBuilder.group({
-            idStudent:
-            ['', [
+        this.formRegisterStudent = this.formBuilder.group({
+            [this.formNames.id]: new FormControl('', [
                 Validators.required
-            ]],
-            nameStudent:
-            ['', [
+            ]),
+            [this.formNames.name]: new FormControl('', [
                 Validators.required,
                 Validators.minLength(3),
                 Validators.maxLength(15),
-            ]],
-            lastNameStudent:
-            ['', [
+            ]),
+            [this.formNames.lastName]: new FormControl('', [
                 Validators.required,
                 Validators.minLength(3),
                 Validators.maxLength(15),
-            ]],
-            grade:
-            ['', [
+            ]),
+            [this.formNames.grade]: new FormControl('', [
                 Validators.required
-            ]],
-            tipe:
-            ['', [
+            ]),
+            [this.formNames.tipe]: new FormControl('', [
                 Validators.required
-            ]],
-            idGuardian:
-            ['', [
+            ]),
+            [this.formNames.idGuardian]: new FormControl('', [
                 Validators.required
-            ]],
-            nameGuardian:
-            ['', [
+            ]),
+            [this.formNames.nameGuardian]: new FormControl('', [
                 Validators.required,
                 Validators.minLength(3),
                 Validators.maxLength(15),
-            ]],
-            lastNameGuardian:
-            ['', [
+            ]),
+            [this.formNames.lastNameGuardian]: new FormControl('', [
                 Validators.required,
                 Validators.minLength(3),
                 Validators.maxLength(15),
-            ]],
-            cell:
-            ['', [
+            ]),
+            [this.formNames.phoneNumber]: new FormControl('', [
                 Validators.required,
                 Validators.minLength(3),
-            ]],
-            email:
-            ['', [
+            ]),
+            [this.formNames.email]: new FormControl('', [
                 Validators.required,
-                Validators.pattern(this.emailPattern)
-            ]],
+                Validators.pattern(registerStudentConstants.emailPattern)
+            ]),
         });
     }
+
+    Send(value) {
+        console.log(value);
+    }
+
 }

@@ -4,6 +4,7 @@
 .register-form-students {
     display: flex;
     justify-content: center;
+    margin:15px;
     
     .form-students {
         width: 100%;
@@ -11,6 +12,11 @@
         .example-container {
             display: flex;
             flex-direction: column;
+        
+            .mat-form-field-appearance-fill .mat-form-field-flex {
+                width: 100%;
+                background-color: $white;
+            }
 
             .title {
                 color: $light-blue;
@@ -47,7 +53,6 @@
         margin: 0 230px 0 230px;
 
         .form-students {
-            width: revert;
 
             .example-container {
                 .title {
