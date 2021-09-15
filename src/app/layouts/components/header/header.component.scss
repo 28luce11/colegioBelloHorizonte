@@ -1,0 +1,78 @@
+@import 'abstract/variables';
+@import 'abstract/mixin';
+
+.header {
+    background: $white;
+    padding: 3px;
+    width: 100%;
+    display: flex;
+    font-size: $font-small;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 0 10px 0 rgb(230, 228, 228);
+
+    .logo-img {
+        @include screen-logo-mobile();
+    }
+    
+    .routes {
+        display: flex;
+        justify-content: space-around;
+
+        .route {
+            margin: 4px;
+
+            .items {
+                color: $dark-blue;
+
+                &:hover {
+                    color: $light-blue;
+                }
+                
+                &:active {
+                    color: $light-blue;
+                }
+                
+            }
+        }
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-sesion {
+        cursor: pointer;
+    }
+}
+
+@include from-breakpoint($break-medium) {
+    .header {
+        font-size: $font-medium;
+
+        .logo-img {
+            @include screen-logo-tablet ();
+        }
+    }
+
+    .avatar {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@include from-breakpoint($break-large) {
+    .header {
+        font-size: $font-large;
+
+        .logo-img {
+            @include screen-logo-desktop ();
+        }
+    }
+
+    .avatar {
+        width: 85px;
+        height: 85px;
+    }
+}

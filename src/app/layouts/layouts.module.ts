@@ -1,16 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { provideRoutes, RouterModule } from '@angular/router';
+
 import { ExternalComponent } from './external/external.component';
 import { InternalComponent } from './internal/internal.component';
-import { RouterModule } from '@angular/router';
-
-
+import { InternalRoutingModule } from './internal/internal-routing.module';
+import { ExternalRoutingModule } from './external/external-routing.module';
+import { HeaderComponent } from './components/header/header.component';
+import { SharedModule } from '../shared/shared.module';
+import { HeaderExternalComponent } from './components/header-external/header-external.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
-  declarations: [ExternalComponent, InternalComponent],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
+    declarations:
+    [
+        ExternalComponent,
+        InternalComponent,
+        HeaderComponent,
+        HeaderExternalComponent,
+        MenuComponent
+    ],
+    imports:
+    [
+        CommonModule,
+        RouterModule,
+        InternalRoutingModule,
+        ExternalRoutingModule,
+        SharedModule
+    ],
+    exports:
+    [
+        ExternalComponent,
+        InternalComponent,
+    ]
 })
 export class LayoutsModule { }
