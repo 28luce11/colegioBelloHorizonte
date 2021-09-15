@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
         {
             path: 'home',
-            loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+            loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
         },
     ]
 },
@@ -21,7 +21,7 @@ const routes: Routes = [
     children: [
         {
             path: 'login',
-            loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+            loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule)
         }
     ]
 },
